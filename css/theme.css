@@ -1,0 +1,33 @@
+body {
+  overflow: hidden;
+  background: black;
+  color: white;
+}
+
+@-webkit-keyframes twinkling{    /*透明度由0到1*/
+  0%{
+    opacity:1;
+  }
+  25%{
+    opacity:1;
+  }
+  50%{
+    opacity:0;
+  }
+  75%{
+    opacity:1;
+  }
+  100%{
+    opacity:1;
+  }
+}
+
+#log p:last-child:after {
+  content: ' ';
+  height: .4em;
+  width: 1em;
+  background-color: white;
+  display: inline-block;
+  margin-bottom: -2px;
+  animation: twinkling 0.8s infinite ease-in-out;
+}
